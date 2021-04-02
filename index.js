@@ -4,12 +4,11 @@ const bodyParser = require("body-parser");
 const ObjectID = require("mongodb").ObjectID;
 require("dotenv").config();
 
+const port = process.env.PORT || 5000;
 
 const app = express();
 app.use(cors());
 app.use(bodyParser.json());
-
-const port = process.env.PORT || 5000;
 
 //database connection
 const MongoClient = require("mongodb").MongoClient;
@@ -74,9 +73,8 @@ client.connect((err) => {
   });
 });
 
-
 app.get("/", (req, res) => {
-  res.send("Welcome to Fresh Food BackEnd Server");
+  res.send("Welcome to Fresh Food BackEnd");
 });
 
 app.listen(process.env.PORT || port);
