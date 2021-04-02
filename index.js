@@ -8,6 +8,7 @@ const app = express();
 app.use(cors());
 app.use(bodyParser.json());
 
+
 const port = process.env.PORT || 5000;
 
 //database connectio
@@ -64,7 +65,7 @@ client.connect((err) => {
   });
 
 
-  
+
   //find data by email from database
   app.get("/booking", (req, res) => {
     ordersCollection
