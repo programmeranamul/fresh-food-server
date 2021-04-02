@@ -76,7 +76,7 @@ client.connect((err) => {
 
 
 app.get("/", (req, res) => {
-  res.send("Welcome to Free Food BackEnd");
+  res.send("Welcome to Free Food BackEnd Server");
 });
 
 app.listen(process.env.PORT || port);
